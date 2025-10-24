@@ -1,208 +1,213 @@
 ---
-name: SRS逆向工程自动化工具
-description: 自动分析现有代码库，通过逆向工程生成详细的软件需求规格说明书(SRS)。当项目缺乏技术文档、需要为遗留系统补全需求分析、或为重构升级准备需求文档时使用。
+name: srs-reverse-engineering
+description: This skill automatically analyzes existing codebases through reverse engineering to generate detailed Software Requirements Specification (SRS) documents following IEEE 830 standards. It should be used when projects lack technical documentation, need requirements analysis for legacy systems, or require requirement documents for refactoring and upgrades.
 ---
 
-# SRS逆向工程自动化技能
+# SRS Reverse Engineering Skill
 
-## 角色与目标
+## Purpose
 
-你是一名资深系统分析师和逆向工程专家。你的核心任务是使用自动化工具深入分析现有代码库，并根据IEEE 830标准生成完整、准确的软件需求规格说明书。
+Analyze existing codebases through reverse engineering to generate comprehensive Software Requirements Specification (SRS) documents following IEEE 830 standards.
 
-## 核心工作流程
+## When to Use
 
-这是一个复杂的多阶段分析任务。**请严格按照以下步骤执行，并在每个阶段完成后更新进度：**
+Use this skill when:
+- Projects lack comprehensive technical documentation
+- Legacy systems require requirements analysis documentation
+- System refactoring or upgrades need formal requirement specifications
+- Onboarding new team members requires system understanding documentation
 
-### 分析进度跟踪：
-- [ ] **阶段1**: 项目概览和准备工作
-- [ ] **阶段2**: 数据库逆向工程分析
-- [ ] **阶段3**: API接口自动发现
-- [ ] **阶段4**: 代码结构和业务逻辑分析
-- [ ] **阶段5**: SRS文档自动生成
-- [ ] **阶段6**: 质量检查和文档完善
+## Core Workflow
 
-## 详细执行步骤
+Execute this multi-stage analysis process sequentially, updating progress after each stage:
 
-### 阶段1: 项目概览和准备工作
+### Analysis Progress:
+- [ ] **Stage 1**: Project overview and preparation
+- [ ] **Stage 2**: Database reverse engineering analysis
+- [ ] **Stage 3**: API interface discovery
+- [ ] **Stage 4**: Code structure and business logic analysis
+- [ ] **Stage 5**: SRS document generation
+- [ ] **Stage 6**: Quality assurance and documentation refinement
 
-**目标**: 理解项目基本情况，准备分析环境
+## Execution Steps
 
-**执行步骤**:
-1. **项目路径确认**: 获取用户提供的项目绝对路径
-2. **输出目录设置**: 创建专用的分析输出目录
-3. **项目类型识别**: 检测项目的主要技术栈和框架
-4. **分析范围确认**: 确定需要分析的代码范围
+### Stage 1: Project Overview and Preparation
 
-**使用工具**: 无需使用脚本，手动检查项目结构
+**Objective**: Understand project basics and prepare analysis environment
 
-**输出**: 分析准备就绪确认
+**Steps**:
+1. **Project Path Confirmation**: Obtain absolute project path from user
+2. **Output Directory Setup**: Create dedicated analysis output directory
+3. **Project Type Identification**: Detect main technology stack and frameworks
+4. **Analysis Scope Confirmation**: Define code scope for analysis
 
-### 阶段2: 数据库逆向工程分析
+**Tools**: Manual project structure examination (no scripts required)
 
-**目标**: 提取数据模型和业务规则
+**Output**: Analysis readiness confirmation
 
-**执行步骤**:
-1. **执行数据库分析脚本**:
+### Stage 2: Database Reverse Engineering Analysis
+
+**Objective**: Extract data models and business rules
+
+**Steps**:
+1. **Execute database analysis script**:
    ```bash
-   python scripts/analyze_database.py [项目路径] --output [输出目录]/database_analysis
+   python scripts/analyze_database.py [PROJECT_PATH] --output [OUTPUT_DIR]/database_analysis
    ```
 
-2. **分析结果检查**:
-   - 检查 `database_analysis.json` 是否生成
-   - 确认数据表和字段是否完整识别
-   - 验证ERD图是否合理
+2. **Analysis result verification**:
+   - Check `database_analysis.json` generation
+   - Confirm complete table and field identification
+   - Validate ERD diagram correctness
 
-3. **结果解读**:
-   - 查看生成的 `erd.md` 文件
-   - 检查 `data_dictionary.md` 的完整性
-   - 识别核心业务实体和关系
+3. **Result interpretation**:
+   - Review generated `erd.md` file
+   - Verify `data_dictionary.md` completeness
+   - Identify core business entities and relationships
 
-**输出**: 数据模型分析报告
+**Output**: Data model analysis report
 
-### 阶段3: API接口自动发现
+### Stage 3: API Interface Discovery
 
-**目标**: 识别和文档化所有API端点
+**Objective**: Identify and document all API endpoints
 
-**执行步骤**:
-1. **执行API发现脚本**:
+**Steps**:
+1. **Execute API discovery script**:
    ```bash
-   python scripts/discover_apis.py [项目路径] --output [输出目录]/api_analysis
+   python scripts/discover_apis.py [PROJECT_PATH] --output [OUTPUT_DIR]/api_analysis
    ```
 
-2. **API端点验证**:
-   - 检查发现的API数量是否合理
-   - 按功能模块对API进行分组
-   - 识别核心业务API和辅助API
+2. **API endpoint validation**:
+   - Verify discovered API count is reasonable
+   - Group APIs by functional modules
+   - Identify core business and auxiliary APIs
 
-3. **外部依赖分析**:
-   - 查看外部API调用列表
-   - 分析系统对外部服务的依赖关系
-   - 评估第三方服务集成的业务影响
+3. **External dependency analysis**:
+   - Review external API call lists
+   - Analyze system dependencies on external services
+   - Assess business impact of third-party integrations
 
-**输出**: API接口文档和外部依赖分析
+**Output**: API documentation and external dependency analysis
 
-### 阶段4: 代码结构和业务逻辑分析
+### Stage 4: Code Structure and Business Logic Analysis
 
-**目标**: 理解系统架构和核心业务规则
+**Objective**: Understand system architecture and core business rules
 
-**执行步骤**:
-1. **执行代码结构分析**:
+**Steps**:
+1. **Execute code structure analysis**:
    ```bash
-   python scripts/analyze_code_structure.py [项目路径] --output [输出目录]/code_analysis
+   python scripts/analyze_code_structure.py [PROJECT_PATH] --output [OUTPUT_DIR]/code_analysis
    ```
 
-2. **架构模式识别**:
-   - 分析项目的整体架构模式
-   - 识别控制层、服务层、数据访问层
-   - 理解组件之间的依赖关系
+2. **Architecture pattern identification**:
+   - Analyze overall project architecture patterns
+   - Identify controller, service, and data access layers
+   - Understand component dependencies
 
-3. **业务规则提取**:
-   - 查看提取的业务规则列表
-   - 按类型对业务规则进行分类
-   - 分析规则之间的关联关系
+3. **Business rule extraction**:
+   - Review extracted business rules list
+   - Categorize rules by type
+   - Analyze rule interrelationships
 
-**输出**: 代码结构分析报告和业务规则清单
+**Output**: Code structure analysis report and business rules inventory
 
-### 阶段5: SRS文档自动生成
+### Stage 5: SRS Document Generation
 
-**目标**: 基于分析结果生成标准化SRS文档
+**Objective**: Generate standardized SRS document based on analysis results
 
-**执行步骤**:
-1. **整合分析结果**: 确保所有分析脚本都成功执行
-2. **执行SRS生成脚本**:
+**Steps**:
+1. **Integrate analysis results**: Ensure all analysis scripts executed successfully
+2. **Execute SRS generation script**:
    ```bash
-   python scripts/generate_srs_template.py --analysis [输出目录] --output [输出目录]/SRS_DOCUMENT.md
+   python scripts/generate_srs_template.py --analysis [OUTPUT_DIR] --output [OUTPUT_DIR]/SRS_DOCUMENT.md
    ```
 
-3. **文档结构检查**:
-   - 确认SRS文档包含所有必要章节
-   - 检查功能需求是否覆盖主要API
-   - 验证数据需求与数据库分析结果一致
+3. **Document structure verification**:
+   - Confirm SRS document contains all required sections
+   - Verify functional requirements cover major APIs
+   - Validate data requirements consistency with database analysis
 
-**输出**: 完整的SRS文档初稿
+**Output**: Complete SRS document draft
 
-### 阶段6: 质量检查和文档完善
+### Stage 6: Quality Assurance and Documentation Refinement
 
-**目标**: 确保生成的SRS文档质量达标
+**Objective**: Ensure generated SRS document meets quality standards
 
-**执行步骤**:
-1. **质量清单检查**: 使用 `assets/srs_checklist.md` 进行全面检查
-2. **内容补充**: 根据检查结果补充缺失的信息
-3. **格式优化**: 调整文档格式和表达方式
-4. **准确性验证**: 交叉验证不同分析结果的一致性
+**Steps**:
+1. **Quality checklist review**: Use `assets/srs_checklist.md` for comprehensive review
+2. **Content enhancement**: Supplement missing information based on review results
+3. **Format optimization**: Adjust document formatting and language clarity
+4. **Accuracy validation**: Cross-verify consistency between different analysis results
 
-**输出**: 最终版本的SRS文档
+**Output**: Final version SRS document
 
-## 关键注意事项
+## Key Considerations
 
-### 🔍 **分析深度控制**
-- 优先分析核心业务模块和关键代码路径
-- 对于测试文件、配置文件等辅助代码进行简化处理
-- 聚焦于业务逻辑相关的代码分析
+### Analysis Depth Control
+- Prioritize core business modules and critical code paths
+- Simplify analysis of test files, configuration files, and auxiliary code
+- Focus on business logic-related code analysis
 
-### 📊 **结果可信度**
-- 明确标注基于代码推断的内容
-- 对于不确定的信息标记为"待确认"
-- 建议用户与项目相关人员验证关键需求
+### Result Credibility
+- Clearly mark content inferred from code analysis
+- Mark uncertain information as "requires confirmation"
+- Recommend validation with project stakeholders for key requirements
 
-### 🛠 **工具使用原则**
-- 严格按照脚本参数格式执行
-- 检查脚本执行输出，识别潜在错误
-- 根据执行结果调整分析策略
+### Tool Usage Principles
+- Execute scripts with exact parameter formats
+- Review script execution outputs for potential errors
+- Adjust analysis strategies based on execution results
 
-### 📝 **文档质量标准**
-- 需求描述必须清晰、无歧义
-- 功能需求必须包含验收标准
-- 非功能需求必须基于代码证据
+### Documentation Quality Standards
+- Requirement descriptions must be clear and unambiguous
+- Functional requirements must include acceptance criteria
+- Non-functional requirements must be based on code evidence
 
-## 参考资源使用指南
+## Bundled Resources Usage
 
-### 📚 **分析参考资料**
-- `references/analysis_guidelines.md`: 详细的逆向工程方法论
-- `references/business_rules_extraction.md`: 业务规则提取技巧
-- `references/nfr_identification.md`: 非功能需求识别指南
+### Reference Materials
+- `references/analysis_guidelines.md`: Detailed reverse engineering methodologies
+- `references/business_rules_extraction.md`: Business rules extraction techniques
+- `references/nfr_identification.md`: Non-functional requirements identification guide
 
-### 📋 **质量控制工具**
-- `assets/srs_checklist.md`: 全面的质量检查清单
-- `references/srs_template.md`: 标准SRS文档模板
+### Quality Control Tools
+- `assets/srs_checklist.md`: Comprehensive quality review checklist
+- `references/srs_template.md`: Standard SRS document template
 
-## 常见问题处理
+## Troubleshooting
 
-### Q1: 脚本执行失败怎么办？
-**解决方案**:
-1. 检查Python环境和依赖包
-2. 确认项目路径的正确性
-3. 查看错误日志并调整参数
+### Script Execution Failures
+1. Check Python environment and dependencies
+2. Confirm project path correctness
+3. Review error logs and adjust parameters
 
-### Q2: 分析结果不完整怎么办？
-**解决方案**:
-1. 扩大分析范围，包含更多代码文件
-2. 手动补充关键的分析结果
-3. 结合多种分析方法进行交叉验证
+### Incomplete Analysis Results
+1. Expand analysis scope to include more code files
+2. Manually supplement critical analysis results
+3. Cross-validate using multiple analysis methods
 
-### Q3: 生成文档质量不高怎么办？
-**解决方案**:
-1. 使用质量检查清单进行逐项检查
-2. 参考标准模板调整文档结构
-3. 补充具体的业务场景和用户故事
+### Documentation Quality Issues
+1. Use quality checklist for systematic review
+2. Reference standard templates for document structure
+3. Add specific business scenarios and user stories
 
-## 成功标准
+## Success Criteria
 
-### ✅ **技术标准**
-- 所有分析脚本成功执行
-- 生成的文档结构完整
-- 分析结果之间逻辑一致
+### Technical Standards
+- All analysis scripts execute successfully
+- Generated documents have complete structure
+- Analysis results maintain logical consistency
 
-### ✅ **质量标准**
-- 功能需求覆盖主要业务场景
-- 非功能需求有代码证据支持
-- 文档表达清晰、格式规范
+### Quality Standards
+- Functional requirements cover major business scenarios
+- Non-functional requirements have code evidence support
+- Documentation is clear, well-formatted, and professional
 
-### ✅ **实用标准**
-- 文档可用于项目交接
-- 为系统重构提供准确依据
-- 支持新团队成员快速理解系统
+### Utility Standards
+- Documents support project handover processes
+- Provide accurate basis for system refactoring
+- Enable rapid team member onboarding
 
 ---
 
-**重要提醒**: 本技能生成的SRS文档基于代码逆向工程分析，反映了系统当前实现的功能。建议在使用前与项目相关人员进行确认，以确保文档的准确性和完整性。
+**Important Note**: This skill generates SRS documents based on code reverse engineering analysis, reflecting system currently implemented functionality. Validate with project stakeholders before use to ensure accuracy and completeness.
