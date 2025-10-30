@@ -1,0 +1,166 @@
+# 竞品分析报告：{{PROJECT_NAME}}
+
+## 分析概览
+
+* **分析对象：** {{ANALYSIS_TARGET}}
+* **竞品选择：** {{COMPETITOR_SELECTION}}
+* **分析维度：** {{ANALYSIS_DIMENSIONS}}
+* **分析目的：** {{ANALYSIS_PURPOSE}}
+
+## 竞品概览
+
+### 主要竞争对手
+{{MAIN_COMPETITORS_LIST}}
+
+### 竞品分类
+{{COMPETITOR_CATEGORIES}}
+
+### 市场份额对比
+{{MARKET_SHARE_COMPARISON}}
+
+### 发展阶段对比
+{{DEVELOPMENT_STAGE_COMPARISON}}
+
+## 功能对比分析
+
+### 核心功能对比表
+{{CORE_FEATURES_COMPARISON}}
+
+### 功能完整性对比
+{{FEATURES_COMPLETENESS_COMPARISON}}
+
+### 创新功能分析
+{{INNOVATIVE_FEATURES_ANALYSIS}}
+
+### 功能缺失分析
+{{MISSING_FEATURES_ANALYSIS}}
+
+## 用户体验对比
+
+### 界面设计对比
+{{UI_DESIGN_COMPARISON}}
+
+### 交互流程对比
+{{INTERACTION_FLOW_COMPARISON}}
+
+### 易用性对比
+{{USABILITY_COMPARISON}}
+
+### 学习成本对比
+{{LEARNING_COST_COMPARISON}}
+
+## 商业模式对比
+
+### 收费模式对比
+{{PRICING_MODEL_COMPARISON}}
+
+### 目标用户群体对比
+{{TARGET_USER_COMPARISON}}
+
+### 价值主张对比
+{{VALUE_PROPOSITION_COMPARISON}}
+
+### 盈利能力对比
+{{PROFITABILITY_COMPARISON}}
+
+## 技术实现对比
+
+### 技术栈对比
+{{TECH_STACK_COMPARISON}}
+
+### 性能表现对比
+{{PERFORMANCE_COMPARISON}}
+
+### 安全性对比
+{{SECURITY_COMPARISON}}
+
+### 可扩展性对比
+{{SCALABILITY_COMPARISON}}
+
+## 市场定位分析
+
+### 细分市场定位
+{{MARKET_SEGMENTATION}}
+
+### 差异化策略
+{{DIFFERENTIATION_STRATEGY}}
+
+### 品牌定位对比
+{{BRAND_POSITIONING_COMPARISON}}
+
+### 用户认知度对比
+{{BRAND_AWARENESS_COMPARISON}}
+
+## 用户反馈对比
+
+### 用户评价对比
+{{USER_REVIEW_COMPARISON}}
+
+### 用户满意度对比
+{{USER_SATISFACTION_COMPARISON}}
+
+### 用户痛点对比
+{{USER_PAIN_POINTS_COMPARISON}}
+
+### 用户忠诚度对比
+{{USER_LOYALTY_COMPARISON}}
+
+## 优势劣势分析
+
+### 项目优势分析
+{{PROJECT_ADVANTAGES}}
+
+### 项目劣势分析
+{{PROJECT_DISADVANTAGES}}
+
+### 竞品优势分析
+{{COMPETITOR_ADVANTAGES}}
+
+### 竞品劣势分析
+{{COMPETITOR_DISADVANTAGES}}
+
+## 机会威胁分析
+
+### 市场机会
+{{MARKET_OPPORTUNITIES}}
+
+### 竞争威胁
+{{COMPETITIVE_THREATS}}
+
+### 技术机会
+{{TECHNOLOGICAL_OPPORTUNITIES}}
+
+### 潜在风险
+{{POTENTIAL_RISKS}}
+
+## 战略建议
+
+### 产品策略建议
+{{PRODUCT_STRATEGY_RECOMMENDATIONS}}
+
+### 市场进入策略
+{{MARKET_ENTRY_STRATEGY}}
+
+### 差异化策略
+{{DIFFERENTIATION_STRATEGY}}
+
+### 竞争应对策略
+{{COMPITIVE_RESPONSE_STRATEGY}}
+
+## 学习借鉴要点
+
+### 可借鉴的功能设计
+{{LEARNABLE_FEATURE_DESIGN}}
+
+### 可借鉴的用户体验
+{{LEARNABLE_USER_EXPERIENCE}}
+
+### 可借鉴的商业模式
+{{LEARNABLE_BUSINESS_MODEL}}
+
+### 可借鉴的运营策略
+{{LEARNABLE_OPERATION_STRATEGY}}
+
+---
+分析时间：{{ANALYSIS_TIME}}
+竞品分析版本：{{COMPETITOR_ANALYSIS_VERSION}}

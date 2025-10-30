@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/PycharmProjects/**)"
+      "Read(//c/PycharmProjects/**)",
+      "Skill(example-skills:skill-creator)",
+      "Bash(mkdir:*)",
+      "Bash(python:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
