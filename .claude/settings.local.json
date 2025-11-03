@@ -6,7 +6,19 @@
       "Bash(mkdir:*)",
       "Bash(python:*)",
       "Bash(tree:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(unzip:*)",
+      "Bash(timeout:*)",
+      "Skill(github-project-analyzer)",
+      "Bash(dir:*)",
+      "Bash(del:*)",
+      "Bash(pip install:*)",
+      "Bash(output/cognee_analysis.json)",
+      "Bash(curl:*)",
+      "Bash(output/cognee_analysis_improved.json)",
+      "Bash(output/cognee_analysis_final.json)",
+      "Skill(prd-reverse-engineering)",
+      "Bash(git clone:*)"
     ],
     "deny": [],
     "ask": []
