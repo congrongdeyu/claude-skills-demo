@@ -18,7 +18,9 @@
       "Bash(output/cognee_analysis_improved.json)",
       "Bash(output/cognee_analysis_final.json)",
       "Skill(prd-reverse-engineering)",
-      "Bash(git clone:*)"
+      "Bash(git clone:*)",
+      "Bash(ls:*)",
+      "Bash(move:*)"
     ],
     "deny": [],
     "ask": []
