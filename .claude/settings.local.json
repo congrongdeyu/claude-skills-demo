@@ -20,7 +20,8 @@
       "Skill(prd-reverse-engineering)",
       "Bash(git clone:*)",
       "Bash(ls:*)",
-      "Bash(move:*)"
+      "Bash(move:*)",
+      "Bash(dify_database_fixed.json)"
     ],
     "deny": [],
     "ask": []
